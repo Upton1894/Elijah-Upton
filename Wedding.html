@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elijah & Delaney's Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green: #6b8f71;
+      --pink: #f9dada;
+      --white: #fffdfd;
+      --text: #3b3b3b;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      background-color: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--green), var(--pink));
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin: 0.5rem 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .section h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--green);
+    }
+
+    .image-gallery {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .image-gallery img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .countdown {
+      font-size: 2rem;
+      margin: 1rem 0;
+      color: var(--green);
+    }
+
+    .tbd {
+      font-weight: bold;
+      color: var(--green);
+    }
+
+    .playlist {
+      text-align: center;
+    }
+
+    .playlist iframe {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 600px;
+      height: 152px;
+      margin-top: 1rem;
+    }
+
+    .bridal-party {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .member {
+      text-align: center;
+      width: 150px;
+    }
+
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      padding: 2rem 1rem;
+    }
+
+    /* Confetti Animation */
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas class="confetti"></canvas>
+
+  <header>
+    <h1>Elijah & Delaney</h1>
+    <p>We're getting married! 💍</p>
+  </header>
+
+  <section class="section">
+    <h2>Our Story</h2>
+    <p>
+      From friendship to forever — Elijah Upton and Delaney Miller's love story is filled with laughter, shared dreams, and unforgettable memories.
+      We're so excited to celebrate the next chapter with you!
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Wedding Details</h2>
+    <p>📍 <span class="tbd">Location: To Be Determined</span></p>
+    <p>🕒 <span class="tbd">Date & Time: To Be Determined</span></p>
+  </section>
+
+  <section class="section">
+    <h2>Countdown</h2>
+    <div class="countdown">⏳ Who knows?</div>
+    <p>Stay tuned for the big day — we’ll let you know as soon as we do! 💌</p>
+  </section>
+
+  <section class="section">
+    <h2>Gallery</h2>
+    <div class="image-gallery">
+      <img src="https://images.unsplash.com/photo-1521540216272-a50305cd4421" alt="Wedding moment 1">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df" alt="Wedding moment 2">
+      <img src="https://images.unsplash.com/photo-1530023367847-a683933f417d" alt="Wedding moment 3">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Bridal Party</h2>
+    <div class="bridal-party">
+      <div class="member">
+        <img src="https://via.placeholder.com/120" alt="Bridesmaid">
+        <p>Maid of Honor</p>
+        <strong>Jessica</strong>
+      </div>
+      <div class="member">
+        <img src="https://via.placeholder.com/120" alt="Best Man">
+        <p>Best Man</p>
+        <strong>Michael</strong>
+      </div>
+      <div class="member">
+        <img src="https://via.placeholder.com/120" alt="Bridesmaid">
+        <p>Bridesmaid</p>
+        <strong>Samantha</strong>
+      </div>
+      <div class="member">
+        <img src="https://via.placeholder.com/120" alt="Groomsman">
+        <p>Groomsman</p>
+        <strong>David</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section playlist">
+    <h2>Our Wedding Playlist</h2>
+    <p>Feel the love with some of our favorite songs 🎶</p>
+    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8a1tdzq5tbM?utm_source=generator" allowtransparency="true" allow="encrypted-media"></iframe>
+  </section>
+
+  <section class="section">
+    <h2>Save the Date</h2>
+    <p>We'll be sending out invitations and updates as soon as details are confirmed!</p>
+    <p>In the meantime, thank you for your love and support. We can't wait to celebrate with you 💕</p>
+  </section>
+
+  <footer>
+    © 2025 Elijah & Delaney | All our love 💞
+  </footer>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const canvas = document.querySelector('.confetti');
+    const confetti = window.confetti.create(canvas, { resize: true });
+
+    function shootConfetti() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+
+    // Let it shoot every 4 seconds to keep the joy going
+    setInterval(shootConfetti, 4000);
+  </script>
+
+</body>
+</html>
