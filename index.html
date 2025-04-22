@@ -222,10 +222,11 @@
     const canvas = document.querySelector('.confetti');
     const confetti = window.confetti.create(canvas, { resize: true });
 
-    function shootConfetti() {
+      // Shoot confetti when the page loads
+    window.onload = () => {
       confetti({
-        particleCount: 100,
-        spread: 70,
+        particleCount: 200,
+        spread: 90,
         origin: { y: 0.6 }
       });
     }
